@@ -2,7 +2,7 @@ module RubyXL
   module CellConvenienceMethods
 
     def change_contents(data, formula_expression = nil)
-      validate_worksheet
+      # validate_worksheet
 
       if formula_expression then
         self.datatype = nil
@@ -125,12 +125,12 @@ module RubyXL
       return nil if xf_obj.alignment.nil?
       xf_obj.alignment.wrap_text
     end
-    
+
     def text_rotation
       validate_worksheet
       xf_obj = get_cell_xf
       return nil if xf_obj.alignment.nil?
-      xf_obj.alignment.text_rotation    
+      xf_obj.alignment.text_rotation
     end
 
     def text_indent()
